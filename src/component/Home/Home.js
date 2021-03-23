@@ -2,7 +2,8 @@ import React from 'react';
 import QuickApi from './QuickApi';
 import Search from './Search';
 
-const Home = ()=>{
+const Home = (props)=>{
+    console.log(props);
     return(
             <>
                 <Search/>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from '../../Header'
 
-const BookingUrl = "http://edurekaapidata.herokuapp.com/placeorder"
+const BookingUrl = "https://edurekaapidata.herokuapp.com/placeorder"
 
 class PlaceBooking extends Component {
     constructor(props){
@@ -9,7 +9,7 @@ class PlaceBooking extends Component {
         this.state={
             id:Math.floor(Math.random()*1000),
             hotel_name:this.props.match.params.name,
-            name:'',
+            name:sessionStorage.getItem('username'),
             phone:'',
         }
     }

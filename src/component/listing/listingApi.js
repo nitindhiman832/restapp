@@ -4,9 +4,13 @@ import ListingDisplay from './listingDisplay';
 import {Link} from 'react-router-dom';
 import Header from '../../Header'
 import CuisineFilter from '../filters/cuisineFilter';
-import CostFilter from '../filters/costFilter'
+import CostFilter from '../filters/costFilter';
+import SortFilter from '../filters/sortFilter'
 
 const url="https://edurekaapidata.herokuapp.com/rest?mealtype="
+
+//const url="https://edurekaApiData/rest?mealtype="
+
 
 class ListingApi extends Component {
     constructor(props){
@@ -25,9 +29,10 @@ class ListingApi extends Component {
                 <div className="row">
                     <Header/>
                     <div style={{marginLeft:'5%'}}>
-                        <div className="col-md-2">
+                        <div className="col-md-2" style={{height:2000}}>
                             <CuisineFilter restPerCuisine={(data)=>{this.setDataPerFilter(data)}} />
                             <CostFilter restPerCost={(data)=>{this.setDataPerFilter(data)}}/>
+                            <SortFilter restPerSort={(data)=>{this.setDataPerFilter(data)}}/>
                         </div>
                         <div className="cod-md-10">
                             <ListingDisplay restaurantList={this.state.restlist}/>

@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import axios from 'axios';
 import ViewBooking from './displayBooking'
 
-const url ="http://edurekaapidata.herokuapp.com/orders"
+const url ="https://edurekaapidata.herokuapp.com/orders"
 
 class DisplayApi extends Component{
     constructor(){
